@@ -1,4 +1,9 @@
+import { useDispatch } from 'react-redux'
+import { connexionAction } from '../redux/store'
+
 function Formulaire () {
+  const dispatch = useDispatch()
+
   return (
     <section>
       <i className='fa fa-user-circle sign-in-icon' />
@@ -16,7 +21,7 @@ function Formulaire () {
           <input type='checkbox' id='remember-me' />
           <label htmlFor='remember-me'>Remember me</label>
         </div>
-        <button className='sign-in-button'>Sign In</button>
+        <button onClick={() => { dispatch(connexionAction()) }} className='sign-in-button'>Sign In</button>
       </form>
     </section>
   )
