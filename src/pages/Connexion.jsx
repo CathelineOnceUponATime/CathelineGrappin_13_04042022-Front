@@ -8,7 +8,6 @@ function Connexion () {
     <div className='connexion'>
       <Header />
       <main>
-        <Display />
         <Formulaire />
       </main>
       <Footer />
