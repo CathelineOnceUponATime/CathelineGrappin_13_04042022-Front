@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Accueil from './pages/Accueil'
 import Connexion from './pages/Connexion'
@@ -7,11 +7,15 @@ import User from './pages/User'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import './Sass/main.scss'
+import history from './redux/history'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container)
+
+root.render(
   <Provider store={store}>
     <React.StrictMode>
-      <Router>
+      <Router history={history}>
         <Routes>
           <Route path='/' element={<Accueil />} />
           <Route path='/Connexion' element={<Connexion />} />
@@ -19,6 +23,5 @@ ReactDOM.render(
         </Routes>
       </Router>
     </React.StrictMode>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 )

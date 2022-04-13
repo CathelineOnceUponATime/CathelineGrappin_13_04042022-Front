@@ -1,18 +1,33 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { connexionAction } from '../redux/store'
+import { useNavigate } from 'react-router-dom'
+import { login } from '../redux/action'
+import { store } from '../redux/store'
+import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 function Formulaire () {
-  const dispatch = useDispatch()
-  const connected = useSelector(state => state.connected)
+  const navigate = useNavigate()
+  const statutReq = useSelector(state => state.status)
+  useEffect(() => {
+    if (statutReq === 'connecte') {
+      navigate('/User')
+    }
+  }, [statutReq, navigate])
+
+  function Connexion (e) {
+    e.preventDefault()
+    const email = document.getElementById('email')
+    const password = document.getElementById('password')
+    store.dispatch(login(email.value, password.value))
+  }
 
   return (
     <section>
       <i className='fa fa-user-circle sign-in-icon' />
       <h1> Sign In </h1>
-      <form action='./User'>
+      <form>
         <div className='input-wrapper'>
           <label htmlFor='username'>Username</label>
-          <input type='text' id='username' />
+          <input type='text' id='email' />
         </div>
         <div className='input-wrapper'>
           <label htmlFor='password'>Password</label>
@@ -24,13 +39,9 @@ function Formulaire () {
         </div>
         <button
           className='sign-in-button'
-          onClick={(e) => {
-            e.preventDefault()
-            dispatch(connexionAction())
-          }}
+          onClick={Connexion}
         > Sign In
         </button>
-        <p> {connected ? 'connecté' : 'deconnecté'} </p>
       </form>
     </section>
   )
