@@ -2,7 +2,7 @@
 /* global fetch */
 /* eslint no-undef: "error" */
 
-import { store } from './store'
+import store from './store'
 
 const dataFetching = () => ({ type: 'loading' })
 const dataError = () => ({ type: 'error' })

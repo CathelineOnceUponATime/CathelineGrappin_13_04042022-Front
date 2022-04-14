@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { login } from '../redux/action'
-import { store } from '../redux/store'
+import store from '../redux/store'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
@@ -10,6 +10,16 @@ function Formulaire () {
   useEffect(() => {
     if (statutReq === 'connecte') {
       navigate('/User')
+    }
+    if (statutReq === 'error') {
+      const form = document.getElementsByTagName('form')[0]
+      let pError = document.getElementsByClassName('error')[0]
+      if (pError === undefined) {
+        pError = document.createElement('p')
+        pError.classList.add('error')
+        pError.textContent = 'Invalid username or password'
+        form.appendChild(pError)
+      }
     }
   }, [statutReq, navigate])
 
@@ -22,7 +32,7 @@ function Formulaire () {
 
   return (
     <section>
-      <i className='fa fa-user-circle sign-in-icon' />
+      <i className='fa fa-user-circle fa-4x sign-in-icon' />
       <h1> Sign In </h1>
       <form>
         <div className='input-wrapper'>

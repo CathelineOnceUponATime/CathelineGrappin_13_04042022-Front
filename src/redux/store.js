@@ -1,3 +1,7 @@
+/* eslint-disable no-redeclare */
+/* global localStorage */
+/* eslint no-undef: "error" */
+
 import { createStore, applyMiddleware } from 'redux'
 import { reducer } from './reducer'
 import thunkMiddleware from 'redux-thunk'
@@ -15,6 +19,30 @@ export const initialeState = {
   error: null
 }
 
+function saveToLocalStorage (state) {
+  try {
+    const serialisedState = JSON.stringify(state)
+    localStorage.setItem('persistantState', serialisedState)
+  } catch (e) {
+    console.warn(e)
+  }
+}
+
+function loadFromLocalStorage () {
+  try {
+    const serialisedState = localStorage.getItem('persistantState')
+    if (serialisedState === null) return undefined
+    return JSON.parse(serialisedState)
+  } catch (e) {
+    console.warn(e)
+    return undefined
+  }
+}
+
 const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
 
-export const store = createStore(reducer, composedEnhancer)
+const store = createStore(reducer, loadFromLocalStorage(), composedEnhancer)
+
+store.subscribe(() => saveToLocalStorage(store.getState()))
+
+export default store

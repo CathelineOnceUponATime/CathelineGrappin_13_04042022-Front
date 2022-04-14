@@ -5,7 +5,7 @@ import Accueil from './pages/Accueil'
 import Connexion from './pages/Connexion'
 import User from './pages/User'
 import { Provider } from 'react-redux'
-import { store } from './redux/store'
+import store from './redux/store'
 import './Sass/main.scss'
 import history from './redux/history'
 

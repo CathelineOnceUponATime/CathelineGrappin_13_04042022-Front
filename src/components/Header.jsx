@@ -2,7 +2,7 @@ import logo from '../assets/argentBankLogo.png'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { deconnexion } from '../redux/action'
-import { store } from '../redux/store'
+import store from '../redux/store'
 import { useEffect } from 'react'
 
 function Header () {
@@ -31,12 +31,14 @@ function Header () {
           <img src={logo} alt='Argent Bank Logo' />
         </Link>
         <Link to='/Connexion' className='notConnected'>
-          <i className='fa fa-user-circle' />
+          <i className='fa fa-2x fa-user-circle' />
           <p> Sign In </p>
         </Link>
         <div className='connected'>
-          <i className='fa-solid fa-circle-user' />
-          <p> {prenom} </p>
+          <Link to='/User'>
+            <i className='fa-solid fa-2x fa-circle-user' />
+            <p> {prenom} </p>
+          </Link>
           <Link to='/' onClick={(e) => { store.dispatch(deconnexion()) }}>
             <i className='fa-solid fa-arrow-right-from-bracket' />
             <p> Sign out </p>

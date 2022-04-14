@@ -1,4 +1,8 @@
-import { store } from '../redux/store'
+/* eslint-disable no-redeclare */
+/* global alert */
+/* eslint no-undef: "error" */
+
+import store from '../redux/store'
 import { updateUserInfo } from '../redux/action'
 import { useSelector } from 'react-redux'
 
@@ -33,9 +37,10 @@ function Information () {
       buttonSave.addEventListener('click', () => {
         if (prenom !== inputPrenom.value || nom !== inputNom.value) {
           store.dispatch(updateUserInfo(inputPrenom.value, inputNom.value))
-          prenom = inputPrenom
-          nom = inputNom
+          prenom = inputPrenom.value
+          nom = inputNom.value
           buttonCancel.click()
+          alert('Change made successfuly')
         }
       })
       buttonCancel.addEventListener('click', () => {

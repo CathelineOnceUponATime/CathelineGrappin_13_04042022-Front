@@ -30,5 +30,8 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    i, p {
+      margin-right: 10px;  
+    }
   }
 }
