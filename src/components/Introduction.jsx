@@ -1,3 +1,8 @@
+/**
+ * the Introduction component
+ * introduce the Argent Bank
+ * @component
+ */
 function Introduction () {
   return (
     <div className='introduction'>

@@ -5,6 +5,11 @@ import { deconnexion } from '../redux/action'
 import store from '../redux/store'
 import { useEffect } from 'react'
 
+/**
+ * an element Header HTML
+ * with connected or not change visual
+ * @component
+ */
 function Header () {
   const connected = useSelector(state => state.connected)
   const prenom = useSelector(state => state.user.prenom)
@@ -30,7 +35,7 @@ function Header () {
         <Link to='/'>
           <img src={logo} alt='Argent Bank Logo' />
         </Link>
-        <Link to='/Connexion' className='notConnected'>
+        <Link to='/Login' className='notConnected'>
           <i className='fa fa-2x fa-user-circle' />
           <p> Sign In </p>
         </Link>

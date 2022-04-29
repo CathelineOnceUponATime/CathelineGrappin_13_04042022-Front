@@ -18,8 +18,9 @@ root.render(
       <Router history={history}>
         <Routes>
           <Route path='/' element={<Accueil />} />
-          <Route path='/Connexion' element={<Connexion />} />
-          <Route path='/User' element={<User />} />
+          <Route path='/Login' element={<Connexion />} />
+          <Route path='/Profile/*' element={<User />} />
+          <Route path='/*' element={<Connexion />} />
         </Routes>
       </Router>
     </React.StrictMode>

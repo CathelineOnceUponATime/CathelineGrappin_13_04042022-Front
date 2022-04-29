@@ -11,12 +11,28 @@ const profileAction = (data) => ({ type: 'profile', payload: data })
 const updateUserAction = (data) => ({ type: 'updateUser', payload: data })
 const deconnexionAction = () => ({ type: 'deconnexion' })
 
+/**
+ * Function deconnexion
+ * change state of connexion
+ * with not connected
+ * @returns dispatch
+ */
 export function deconnexion () {
   return function (dispatch) {
     dispatch(deconnexionAction())
   }
 }
 
+/**
+ * Function login
+ * @param {String} email email of account
+ * @param {String} password password of account
+ * with good parameters
+ * request return a token
+ * and with this token
+ * connect to profile function
+ * @returns dispatch
+ */
 export function login (email, password) {
   return function (dispatch) {
     try {
@@ -37,11 +53,17 @@ export function login (email, password) {
         }
       })
     } catch (error) {
-      // store.dispatch(dataRejected(error))
+      dispatch(dataError())
     }
   }
 }
 
+/**
+ * Function profile
+ * with token
+ * request return a data of user
+ * @returns dispatch
+ */
 export function profile () {
   return function (dispatch) {
     try {
@@ -60,11 +82,19 @@ export function profile () {
         }
       })
     } catch (error) {
-      // store.dispatch(dataRejected(error))
+      dispatch(dataError())
     }
   }
 }
 
+/**
+ * Function updateUserInfo
+ * @param {String} prenom first name of user
+ * @param {String} nom last name of user
+ * update a first name or/and last name of user
+ * in database
+ * @returns dispatch
+ */
 export function updateUserInfo (prenom, nom) {
   return function (dispatch) {
     try {
@@ -85,7 +115,7 @@ export function updateUserInfo (prenom, nom) {
         }
       })
     } catch (error) {
-      // store.dispatch(dataRejected(error))
+      dispatch(dataError())
     }
   }
 }

@@ -1,3 +1,11 @@
+import PropTypes from 'prop-types'
+
+/**
+ * @param {String} titre title of account
+ * @param {Number} montant the global ammount of account
+ * @param {String} description the desciption of account
+ * @component
+ */
 function Compte ({ titre, montant, description }) {
   return (
     <section className='compte'>
@@ -6,11 +14,17 @@ function Compte ({ titre, montant, description }) {
         <p className='compte-montant'> {montant} </p>
         <p className='compte-description'> {description} </p>
       </div>
-      <div>
+      <div className='cta'>
         <button> View transactions </button>
       </div>
     </section>
   )
+}
+
+Compte.propTypes = {
+  titre: PropTypes.string.isRequired,
+  montant: PropTypes.number,
+  description: PropTypes.string.isRequired
 }
 
 export default Compte

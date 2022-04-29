@@ -19,6 +19,11 @@ export const initialeState = {
   error: null
 }
 
+/**
+ * Function saveToLocalStorage
+ * @param {object} state state of application
+ * save the state in localStorage
+ */
 function saveToLocalStorage (state) {
   try {
     const serialisedState = JSON.stringify(state)
@@ -28,6 +33,10 @@ function saveToLocalStorage (state) {
   }
 }
 
+/**
+ * Function loadFromLocalStorage
+ * load the state in localStorage
+ */
 function loadFromLocalStorage () {
   try {
     const serialisedState = localStorage.getItem('persistantState')

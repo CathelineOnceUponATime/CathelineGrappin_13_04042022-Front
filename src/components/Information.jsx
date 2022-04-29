@@ -6,6 +6,12 @@ import store from '../redux/store'
 import { updateUserInfo } from '../redux/action'
 import { useSelector } from 'react-redux'
 
+/**
+ * the Information component
+ * have update of first name or/and last name
+ * in database
+ * @component
+ */
 function Information () {
   let prenom = useSelector(state => state.user.prenom)
   let nom = useSelector(state => state.user.nom)
@@ -32,7 +38,9 @@ function Information () {
       inputNom.value = nom
       buttonSave.textContent = 'Save'
       buttonCancel.textContent = 'Cancel'
+      buttonSave.classList.add('sign-in-button')
       buttonSave.classList.add('buttonEdit')
+      buttonCancel.classList.add('sign-in-button')
       buttonCancel.classList.add('buttonEdit')
       buttonSave.addEventListener('click', () => {
         if (prenom !== inputPrenom.value || nom !== inputNom.value) {
