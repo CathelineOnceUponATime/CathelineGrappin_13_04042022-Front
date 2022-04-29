@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+![logo-du-projet](https://raw.githubusercontent.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Front/main/src/assets/argentBankLogo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ArgentBank
+> Projet 13 - Utilisez une API pour un compte utilisateur bancaire avec React
+## Author 
 
-## Available Scripts
+- Catheline GRAPPIN
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+- [![Made-with-Javascript](https://img.shields.io/badge/Made%20with-Javascript-green)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+- [![Sassv_1.49.11](https://img.shields.io/badge/Sass-v_1.49.11-ff69b4)](https://sass-lang.com/)
+- [![React-v_18.0.0](https://img.shields.io/badge/React-v_18.0.0-blue)](https://fr.reactjs.org/)
+- [![React-Router-v_6.3.0](https://img.shields.io/badge/React_Router-v_6.3.0-yellow)](https://reactrouter.com/docs/en/v6)
+- [![Redux-Thunk-v_2.4.1](https://img.shields.io/badge/Redux_Thunk-v_2.4.1-red)](https://github.com/reduxjs/redux-thunk)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Environments
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://github.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Front
 
-### `npm test`
+## Resources provided
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://github.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Back/tree/master/designs
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [![npm-v_7.24.1](https://img.shields.io/badge/npm-v_7.24.1-orange)](https://docs.npmjs.com/)
+- [![NodeJs-v_16.10.0](https://img.shields.io/badge/NodeJs-v_16.10.0-red)](https://nodejs.org/en/docs/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- VSCode
 
-### `npm run eject`
+### Installing and launching Back-End
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the repository of ArgentBank Back-End:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`git clone https://github.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Back.git`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Inside this back-end repository, install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm install`
 
-## Learn More
+Launch back-end on port 5001 :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm run server`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installing and launching Front-end
 
-### Code Splitting
+Clone the repository of ArgentBank Front-End:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`git clone https://github.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Front.git`
 
-### Analyzing the Bundle Size
+Inside this Front-End repository, install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`npm install`
 
-### Making a Progressive Web App
+Lauch Front-End on port 3000:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`npm start`
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Front-End is now rendered at URL `http://localhost:3000`
