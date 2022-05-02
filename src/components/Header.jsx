@@ -40,7 +40,7 @@ function Header () {
           <p> Sign In </p>
         </Link>
         <div className='connected'>
-          <Link to='/User'>
+          <Link to='/Profile'>
             <i className='fa-solid fa-2x fa-circle-user' />
             <p> {prenom} </p>
           </Link>

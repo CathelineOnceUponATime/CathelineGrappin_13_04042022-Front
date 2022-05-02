@@ -4,7 +4,7 @@ import Formulaire from '../components/Formulaire'
 
 /**
  * The Connexion Page
- * with header, 
+ * with header,
  * form to connect at your personnal espace
  * and footer of Argent Bank
  * @component
