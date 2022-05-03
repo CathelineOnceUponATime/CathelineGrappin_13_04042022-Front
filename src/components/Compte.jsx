@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 /**
  * @param {String} titre title of account
- * @param {Number} montant the global ammount of account
+ * @param {String} montant the global ammount of account
  * @param {String} description the desciption of account
  * @component
  */
@@ -23,7 +23,7 @@ function Compte ({ titre, montant, description }) {
 
 Compte.propTypes = {
   titre: PropTypes.string.isRequired,
-  montant: PropTypes.number,
+  montant: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 }
 
