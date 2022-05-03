@@ -14,7 +14,6 @@ import { useSelector } from 'react-redux'
  */
 function User () {
   const connected = useSelector(state => state.connected)
-  console.log(connected)
   return (
     connected
       ? (
