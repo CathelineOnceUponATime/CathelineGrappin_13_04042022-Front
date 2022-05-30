@@ -42,7 +42,7 @@ export function login (email, password) {
         headers: { 'Content-type': 'application/json; charset=UTF-8' },
         body: JSON.stringify({ email: email, password: password })
       }
-      fetch('http://localhost:5001/api/v1/user/login', requestOptions).then(function (response) {
+      fetch('https://argentbank-onceuponatime.herokuapp.com/api/v1/user/login', requestOptions).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
             dispatch(connexionAction(data))
@@ -74,7 +74,7 @@ export function profile () {
           Authorization: 'Bearer' + store.getState().token
         }
       }
-      fetch('http://localhost:5001/api/v1/user/profile', requestOptions).then(function (response) {
+      fetch('https://argentbank-onceuponatime.herokuapp.com/api/v1/user/profile', requestOptions).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
             dispatch(profileAction(data))
@@ -107,7 +107,7 @@ export function updateUserInfo (prenom, nom) {
         },
         body: JSON.stringify({ firstName: prenom, lastName: nom })
       }
-      fetch('http://localhost:5001/api/v1/user/profile', requestOptions).then(function (response) {
+      fetch('https://argentbank-onceuponatime.herokuapp.com/api/v1/user/profile', requestOptions).then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
             dispatch(updateUserAction(data))
