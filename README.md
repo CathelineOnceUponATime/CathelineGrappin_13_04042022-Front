@@ -18,6 +18,14 @@
 
 https://github.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Front
 
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front)  
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front&metric=bugs)](https://sonarcloud.io/summary/new_code?id=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=CathelineOnceUponATime_CathelineGrappin_13_04042022-Front)
+
 ## Resources provided
 
 https://github.com/CathelineOnceUponATime/CathelineGrappin_13_04042022-Back/tree/master/designs
