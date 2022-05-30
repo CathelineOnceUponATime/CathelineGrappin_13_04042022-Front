@@ -6,7 +6,10 @@ import { initialeState } from './store'
  * @param {String} action action of state
  * switch in case of type of action the state has update
  */
-export function reducer (action, state = initialeState) {
+export function reducer (state, action) {
+  if (state === undefined) {
+    state = initialeState
+  }
   switch (action.type) {
     case 'error' : return { ...state, status: 'error' }
     case 'loading' :
