@@ -41,9 +41,31 @@ Inside this back-end repository, install dependencies:
 
 `npm install`
 
-Launch back-end on port 5001 :
+Launch back-end on port 3001 :
 
 `npm run server`
+
+#### Populated Database Data
+
+##### Tony Stark
+
+- First Name: `Tony`
+- Last Name: `Stark`
+- Email: `tony@stark.com`
+- Password: `password123`
+
+##### Steve Rogers
+
+- First Name: `Steve`,
+- Last Name: `Rogers`,
+- Email: `steve@rogers.com`,
+- Password: `password456`
+
+To see update : https://cloud.mongodb.com/v2/624ab6af0a01ed0c6c716e39#metrics/replicaSet/629497c638f6fb03926e3aa7/explorer/myFirstDatabase/users/find
+
+#### API Documentation
+
+To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
 
 ### Installing and launching Front-end
 
